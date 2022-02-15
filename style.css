@@ -334,22 +334,6 @@ a:active {
     -webkit-tap-highlight-color: transparent;
 }
 
-input {
-
-}
-
-input:focus {
-
-}
-
-textarea {
-
-}
-
-textarea:focus {
-
-}
-
 /*-------------------------------------------*/
 /* ----- REUSABLE COMPONENTS ------ */
 /*-------------------------------------------*/
@@ -1266,10 +1250,6 @@ textarea:focus {
     padding: 108px 0 12px 0;
 }
 
-.lp_h2_wrapp {
-
-}
-
 .lp_h2_wrapp h2 {
     padding: 10px 0;
 }
@@ -1308,10 +1288,6 @@ textarea:focus {
     display: -webkit-flex;
     justify-content: center;
     -webkit-justify-content: center;
-}
-
-.lp_info_thumb_wrapp:nth-child(3) {
-
 }
 
 .lp_info_thumb {
@@ -1574,7 +1550,6 @@ textarea:focus {
 }
 
 .lp_contacts_list li {
-    /*width: 190px;*/
     width: 50%;
     margin: 10px 0;
     padding-left: 20px;
@@ -1741,16 +1716,8 @@ textarea:focus {
     max-width: 710px;
 }
 
-.lp_h2_wrapp.white {
-
-}
-
 .lp_h2_wrapp.white h2 {
     color: #fff;
-}
-
-.lp_h2_descript.white {
-
 }
 
 .lp_h2_descript.white p {
@@ -1830,10 +1797,6 @@ textarea:focus {
 /*-- Section 6 - Landing Main Page --*/
 
 /*-- Section 7 - Landing Main Page --*/
-
-.lp_sect_7 {
-
-}
 
 .lp_slider_2_wrapp {
     padding: 110px 0 179px 0;
@@ -1972,10 +1935,6 @@ textarea:focus {
     color: #141F27;
 }
 
-.lp_author_thumb_descript {
-
-}
-
 .lp_author_thumb_descript p {
     font-weight: normal;
     font-size: 16px;
@@ -2009,10 +1968,6 @@ textarea:focus {
     right: 16%;
 }
 
-.lp_slider_3_wrapp {
-
-}
-
 .lp_slider_3 {
     margin: 0 -30px;
 }
@@ -2022,7 +1977,6 @@ textarea:focus {
 }
 
 .lp_author_thumb_2 {
-    /*display: block;*/
     display: flex;
     display: -webkit-flex;
     align-items: flex-end;
@@ -2488,10 +2442,6 @@ textarea:focus {
     margin: 10px 30px;
 }
 
-.lp_client_logo img {
-
-}
-
 /*-- /Section 12 - Landing Main Page --*/
 
 /*-- Section 13 - Landing Main Page --*/
@@ -2548,10 +2498,6 @@ textarea:focus {
     width: calc(100% - 80px);
 }
 
-.lp_step_job_thumb > div:nth-child(1) img {
-
-}
-
 .lp_step_job_thumb > div:nth-child(2) p {
     font-family: "Open Sans";
     font-weight: normal;
@@ -2606,13 +2552,6 @@ textarea:focus {
 }
 
 /*-- /Section 14 - Landing Main Page --*/
-
-
-
-
-
-
-
 
 /*-------------------------------------------*/
 /* ----- FOOTER ------ */

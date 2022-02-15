@@ -289,4 +289,17 @@ $(document).ready(function() {
     // ]
   });
 
+  //--------
+
+  $('a[href^="#"]').on('click', function (e) {
+      e.preventDefault();
+      var hrefAttr = $(this).attr("href");
+      if( hrefAttr.length > 0 && hrefAttr != "#" ) {
+        $(this).addClass("active");
+        $('html, body').stop().animate({
+          'scrollTop': $(hrefAttr).offset().top+2
+        }, 500);
+      }
+  });
+
 });
