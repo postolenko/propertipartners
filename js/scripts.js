@@ -295,6 +295,7 @@ $(document).ready(function() {
       e.preventDefault();
       var hrefAttr = $(this).attr("href");
       if( hrefAttr.length > 0 && hrefAttr != "#" ) {
+        $(".lp_main_nav a").removeClass("active");
         $(this).addClass("active");
         $('html, body').stop().animate({
           'scrollTop': $(hrefAttr).offset().top+2
