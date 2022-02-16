@@ -365,7 +365,7 @@ a:active {
 }
 
 .visible_600 {
-    display: none;
+    display: none !important;
 }
 
 .visible_480 {
@@ -567,7 +567,7 @@ a:active {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 3;
+    z-index: 4;
 }
 
 .lp_header_site {
@@ -679,6 +679,7 @@ a:active {
 
 .lp_main_nav > li > a {
     display: block;
+    font-family: "Inter";
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
@@ -871,7 +872,7 @@ a:active {
 
 /* ----- Responsive Menu Button ------ */
 
-.respmenubtn {
+.lp_respmenubtn {
     /*display: inline-block;*/
     display: none;
     vertical-align: top;
@@ -885,11 +886,11 @@ a:active {
     border: 1px solid transparent;
 }
 
-.respmenubtn span {
+.lp_respmenubtn span {
     display: block;
     width: 18px;
     height: 2px;
-    background: #fff;
+    background: #000;
     margin: 0 auto 5px auto;
     -webkit-transition-property: transform, border, background;
     -webkit-transition-duration: .3s;
@@ -912,47 +913,43 @@ a:active {
     transition-timing-function: ease;
 }
 
-.respmenubtn span:last-child {
+.lp_respmenubtn span:last-child {
     margin: 0 auto;
 }
 
-.white_header .respmenubtn span {
-    background: #000;
-}
-
-.respmenubtn:active {
+.lp_respmenubtn:active {
     -webkit-tap-highlight-color: rgba(0,0,0,0); 
     -webkit-tap-highlight-color: transparent;
 }
 
-.respmenubtn:hover span {
-    background: #FF5722;
+.lp_respmenubtn:hover span {
+    background: #000;
 }
 
-.respmenubtn.active span {
+.lp_respmenubtn.active span {
     position: relative;
-    width: 35px;
-    top: 2px;
+    width: 17px;
+    top: 0;
     left: 0;
-    background: #FF5722;
+    background: #000;
 }
 
-.respmenubtn.active span:last-child {
+.lp_respmenubtn.active span:last-child {
     display: none;
 }
 
-.respmenubtn.active span:first-child {
+.lp_respmenubtn.active span:first-child {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
     margin: 3px 0 0 0;
     position: relative;
-    top: 4px;
-    left: 5px;
+    top: 2px;
+    left: 3px;
 }
 
-.respmenubtn.active span:nth-child(2) {
+.lp_respmenubtn.active span:nth-child(2) {
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
@@ -961,6 +958,9 @@ a:active {
 
 /* ----- /Responsive Menu Button ------ */
 
+.visible_767 {
+    display: none;
+}
 
 /*-------------------------------------------*/
 /* ----- CONTENT ------ */
@@ -1022,6 +1022,7 @@ a:active {
 }
 
 .lp_soc_wrapp > div:nth-child(1) p {
+    white-space: nowrap;
     font-weight: normal;
     font-size: 16px;
     line-height: 22px;
@@ -1276,6 +1277,10 @@ a:active {
     background-position: center;
 }
 
+.lp_lp_info_box_resp_img {
+    display: none;
+}
+
 .lp_info_thumb_wrapp:nth-child(1) {
     display: flex;
     display: -webkit-flex;
@@ -1478,6 +1483,40 @@ a:active {
     bottom: -18px;
 }
 
+.lp_more_btn_wrapp {
+    padding: 29px 0 2px 0;
+}
+
+.lp_more_btn {
+    justify-content: flex-start;
+    -webkit-justify-content: flex-start;
+    background-color: #FF5722;
+    min-height: 40px;
+    padding: 5px 60px;
+    font-family: "Open Sans";
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 186.5%;
+    color: #FFF;
+}
+
+.lp_more_btn:after {
+    display: inline-block;
+    vertical-align: top;
+    content: "";
+    width: 24px;
+    height: 24px;
+    margin-left: 12px;
+    background-repeat: no-repeat;
+    background-image: url(img/lp_arrow_next.svg);
+    background-position: center;
+    background-size: contain;
+}
+
+.lp_more_btn_wrapp .lp_more_btn {
+    width: 100%;
+}
+
 /*-- /Section 3 - Landing Main Page --*/
 
 /*-- Section 4 - Landing Main Page --*/
@@ -1529,6 +1568,8 @@ a:active {
 .lp_contacts_templ > .right_col {
     width: 470px;
     padding: 10px 0 10px 10px;
+    position: relative;
+    z-index: 2;
 }
 
 .lp_contacts_templ.white {
@@ -1631,6 +1672,9 @@ a:active {
 
 .lp_sect_5 {
     padding: 110px 0 76px 0;
+    position: relative;
+    z-index: 2;
+    background-color: #fff;
 }
 
 .lp_thumbs_2_wrapp {

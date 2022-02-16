@@ -5,7 +5,14 @@ function initiaPopupSlider() {
     arrows: false,
     dots: false,
     fade: true,
-    asNavFor: '.lp_thumb_1_slider_miniature'
+    asNavFor: '.lp_thumb_1_slider_miniature',
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+        dots: true
+      }
+    }]
   });
   $('.lp_thumb_1_slider_miniature').slick({
     slidesToShow: 3,
@@ -69,32 +76,23 @@ $(document).ready(function() {
     appendArrows: $("#sl_1_arrows"),
     prevArrow: '<button class="slick-prev lp_slick_arrow" aria-label="Previous" type="button"></button>',
     nextArrow: '<button class="slick-next lp_slick_arrow" aria-label="Next" type="button"></button>',
-    // responsive: [
-    //   {
-    //     breakpoint: 700,
-    //     settings: {
-    //       slidesToShow: 3,
-    //     }
-    //   },
-    //   {
-    //     breakpoint: 600,
-    //     settings: {
-    //       slidesToShow: 4,
-    //       vertical: false
-    //     }
-    //   },
-    //   {
-    //     breakpoint: 480,
-    //     settings: {
-    //       slidesToShow: 3,
-    //       vertical: false
-    //     }
-    //   }
-    // ]
-  });
-
-
-  
+    responsive: [
+      {
+        breakpoint: 1124,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });  
 
   $(".dr_title").on("click", function(e) {
     e.preventDefault();
@@ -226,31 +224,10 @@ $(document).ready(function() {
     autoplaySpeed: 4000,
     speed: 1200,
     variableWidth: true,
+    centerMode: true,
     appendArrows: $("#sl_2_arrows"),
     prevArrow: '<button class="slick-prev lp_slick_arrow" aria-label="Previous" type="button"></button>',
-    nextArrow: '<button class="slick-next lp_slick_arrow" aria-label="Next" type="button"></button>',
-    // responsive: [
-    //   {
-    //     breakpoint: 700,
-    //     settings: {
-    //       slidesToShow: 3,
-    //     }
-    //   },
-    //   {
-    //     breakpoint: 600,
-    //     settings: {
-    //       slidesToShow: 4,
-    //       vertical: false
-    //     }
-    //   },
-    //   {
-    //     breakpoint: 480,
-    //     settings: {
-    //       slidesToShow: 3,
-    //       vertical: false
-    //     }
-    //   }
-    // ]
+    nextArrow: '<button class="slick-next lp_slick_arrow" aria-label="Next" type="button"></button>'
   });
 
   $('.lp_slider_4').not(".slick-initialized").slick({
@@ -301,6 +278,34 @@ $(document).ready(function() {
           'scrollTop': $(hrefAttr).offset().top+2
         }, 500);
       }
+  });
+
+  // --------
+
+  $(".lp_respmenubtn").click(function(e) {
+      e.preventDefault();
+      if( $("#lp_resp_nav").is(":hidden") ) {
+          $("#lp_resp_nav").fadeIn(300);
+          $(this).addClass("active");
+      } else {
+          $("#lp_resp_nav").fadeOut(300);
+          $(this).removeClass("active");
+      }
+  });
+  
+  $(this).keydown(function(eventObject){
+      if (eventObject.which == 27 &&
+          $("#lp_resp_nav").is(":visible") &&
+          bodyWidth <= 1024) {
+          $("#lp_resp_nav").fadeOut(300);
+          $(".lp_respmenubtn").removeClass("active");
+      }
+  });
+
+  $(".close_menu").click(function(e) {
+    e.preventDefault();
+    $("#lp_resp_nav").fadeOut(300);
+    $(".lp_respmenubtn").removeClass("active");
   });
 
 });
