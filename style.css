@@ -1358,7 +1358,7 @@ a:active {
 .lp_sect_3 {
     padding: 105px 0 149px 0;
     position: relative;
-    z-index: 2;
+    z-index: 3;
 }
 
 .lp_h2_wrapp_two_cols {
@@ -1524,6 +1524,7 @@ a:active {
 .lp_contacts_sect {
     background-color: #1D2044;
     position: relative;
+    z-index: 2;
 }
 
 .lp_contacts_right_shape {
@@ -2309,6 +2310,10 @@ a:active {
 
 /*-- Section 11 - Landing Main Page --*/
 
+.lp_sect_11 {
+    padding: 110px 0 1px 0;
+}
+
 .lp_slider_4_wrapp {
     padding: 56px 0 100px 0;
 }
@@ -2323,13 +2328,13 @@ a:active {
 
 .lp_testimonial_thumb {
     max-width: 368px;
-    margin: 0 auto;
+    width: 100%;
     background: #FFF;
     box-shadow: 0 0 1px rgba(12, 26, 75, .24), 0 3px 8px -1px rgba(50, 50, 71, .05);
     -webkit-box-shadow: 0 0 1px rgba(12, 26, 75, .24), 0 3px 8px -1px rgba(50, 50, 71, .05);
     border-radius: 4px;
     -webkit-border-radius: 4px;
-    margin: 30px 0 30px 0;
+    margin: 30px auto 30px auto;
     padding: 0 30px 10px 30px;
 }
 

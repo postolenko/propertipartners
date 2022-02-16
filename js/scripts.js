@@ -20,30 +20,16 @@ function initiaPopupSlider() {
     asNavFor: '.lp_thumb_1_slider_big',
     dots: false,
     arrows: false,
-    focusOnSelect: true,
-    // responsive: [
-    //   {
-    //     breakpoint: 700,
-    //     settings: {
-    //       slidesToShow: 3,
-    //     }
-    //   },
-    //   {
-    //     breakpoint: 600,
-    //     settings: {
-    //       slidesToShow: 4,
-    //       vertical: false
-    //     }
-    //   },
-    //   {
-    //     breakpoint: 480,
-    //     settings: {
-    //       slidesToShow: 3,
-    //       vertical: false
-    //     }
-    //   }
-    // ]
+    focusOnSelect: true
   }); 
+}
+
+function getWrapperParams() {
+  if($(document).scrollTop() > 10) {
+    $("#lp_header").addClass("scroll");
+  } else {
+    $("#lp_header").removeClass("scroll");
+  }
 }
 
 var w = window,
@@ -57,13 +43,15 @@ $(window).on("load", function() {
 
 $(window).resize(function() {
   bodyWidth = w.innerWidth || e.clientWidth || g.clientWidth;
+  getWrapperParams();
 });
 
 $(document).scroll(function() {
+  getWrapperParams();
 });
 
 $(document).ready(function() {
-
+  getWrapperParams();
 
   $('.lp_slider_1').not(".slick-initialized").slick({
     slidesToShow: 3,
@@ -238,32 +226,25 @@ $(document).ready(function() {
     autoplay: true,
     autoplaySpeed: 4000,
     speed: 1200,
-    variableWidth: true,
     appendArrows: $("#sl_4_arrows"),
     prevArrow: '<button class="slick-prev lp_slick_arrow" aria-label="Previous" type="button"></button>',
     nextArrow: '<button class="slick-next lp_slick_arrow" aria-label="Next" type="button"></button>',
-    // responsive: [
-    //   {
-    //     breakpoint: 700,
-    //     settings: {
-    //       slidesToShow: 3,
-    //     }
-    //   },
-    //   {
-    //     breakpoint: 600,
-    //     settings: {
-    //       slidesToShow: 4,
-    //       vertical: false
-    //     }
-    //   },
-    //   {
-    //     breakpoint: 480,
-    //     settings: {
-    //       slidesToShow: 3,
-    //       vertical: false
-    //     }
-    //   }
-    // ]
+    responsive: [
+      {
+        breakpoint: 1124,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   });
 
   //--------
@@ -307,5 +288,12 @@ $(document).ready(function() {
     $("#lp_resp_nav").fadeOut(300);
     $(".lp_respmenubtn").removeClass("active");
   });
+
+  // ---------------
+
+  if($("input[type = 'tel']").length > 0) {
+    var im = new Inputmask("+380 (99)-999-99-99");
+    im.mask($("input[type = 'tel']"));
+  }
 
 });
