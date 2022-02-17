@@ -338,6 +338,10 @@ a:active {
 /* ----- REUSABLE COMPONENTS ------ */
 /*-------------------------------------------*/
 
+.lp_wrapper {
+    overflow: hidden;
+}
+
 .lp_row {
     max-width: 1290px;
     margin: 0 auto;

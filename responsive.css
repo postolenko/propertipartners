@@ -383,7 +383,7 @@
 	}
 
 	.lp_info_box {
-		background-image: none;
+		background-image: none !important;
 		margin: 0;
 	}
 
@@ -495,7 +495,7 @@
 	/*-- Header --*/
 
 	#lp_header {
-		width: 100%;
+		width: 100vw;
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -658,6 +658,14 @@
 	    font-size: 16px;
 	}
 
+	.lp_info_thumb_wrapp:nth-child(2) .lp_info_thumb:before {
+		display: none;
+	}
+
+	.lp_info_thumb_wrapp:nth-child(2) .lp_info_thumb:after {
+		display: none;
+	}
+
 	/*-- /Section 2 - Landing Main Page --*/
 
 	/*-- Section 3 - Landing Main Page --*/
@@ -715,6 +723,10 @@
 		position: absolute;
 		bottom: 0;
 		right: 0;
+	}
+
+	.light_shape {
+		display: none;
 	}
 
 	/*-- /Section 4 - Landing Main Page --*/
