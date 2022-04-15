@@ -1,5 +1,22 @@
 @media only screen and (max-width: 1240px) {
 
+	/*-- Section 1 - Landing Main Page --*/
+
+	.lp_promo_two_cols > .left_col {
+	    width: calc(100% - 380px);
+	    padding: 0 10px 0 0;
+	}
+
+	.lp_promo_two_cols > .right_col {
+	    width: 380px;
+	}
+
+	.lp_title h1 {
+	    font-size: 45px;
+	}
+
+	/*-- /Section 1 - Landing Main Page --*/
+
 	/*-- Section 3 - Landing Main Page --*/
 
 	.lp_thumb_1_slider_big .slide {
@@ -211,6 +228,10 @@
 	    padding: 67px 0 67px 0;
 	}
 
+	.lp_title h1 {
+	    font-size: 28px;
+	}
+
 	.lp_promo_descript_wrapp > div:nth-child(1) {
 	    width: 90px;
 	}
@@ -370,6 +391,39 @@
 	}
 
 	/*-- Header --*/
+
+	/*-- Section 1 - Landing Main Page --*/
+
+	.lp_promo_two_cols {
+		display: block;
+		position: relative;
+	}
+
+	.lp_promo_two_cols > .left_col {
+	    width: 100%;
+	    padding: 0;
+	}
+
+	.lp_promo_two_cols > .right_col {
+	    width: 100%;
+	    padding: 0;
+	    position: relative;
+	}
+
+	.lp_video_btn {
+	    position: relative;
+		margin-top: 0px;
+	    bottom: auto;
+	    left: 50%;
+	    transform: translate(-50%, 0);
+	    -webkit-transform: translate(-50%, 0);
+	}
+
+	.lp_search_steps {
+		margin: 20px auto;
+	}
+
+	/*-- /Section 1 - Landing Main Page --*/
 
 	/*-- Section 2 - Landing Main Page --*/
 
@@ -973,7 +1027,8 @@
 	.lp_video_btn {
 	    width: 100px;
 	    height: 100px;
-	}
+	    margin-top: 23%;
+	}  
 
 	.lp_video_btn:after {
 	    width: 100px;
@@ -1324,17 +1379,55 @@
 	width: 100%;
 }
 
-.lp_video_btn {
-	position: relative;
-	margin-top: 23%;
-	bottom: auto;
-	left: 50%;
-	transform: translate(-50%, 0);
-	-webkit-transform: translate(-50%, 0);
+.lp_search_steps {
+	min-height: 347px;
+	padding: 15px 18px 80px 18px;
+    position: relative;
+}
+
+.lp_search_steps_line {
+	width: 100%;
+	margin: 0;
+	border: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.lp_step_form_footer {
+    padding: 0 18px;
 }
 
 .lp_promo_video {
     bottom: 73px;
+}
+
+.lp_search_steps_count {
+    padding: 10px 0;
+}
+
+.lp_search_steps_descript {
+    padding: 10px 0 10px 0;
+}
+
+.lp_step_search_title {
+    padding: 3px 0 15px 0;
+}
+
+.lp_step_search_title h3 {
+    font-size: 20px;
+}
+
+.lp_step_form_footer {
+    bottom: 17px;
+}
+
+.lp_steps_pill {
+    min-height: 40px;
+}
+
+.lp_range_slider_wrapp {
+    padding-top: 10px;
 }
 
 /*-- /Section 1 - Landing Main Page --*/

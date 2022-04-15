@@ -296,4 +296,40 @@ $(document).ready(function() {
     im.mask($("input[type = 'tel']"));
   }
 
+  // --------------
+
+  if( document.getElementById("lpRangeSlider") ) {
+
+    priceSliderLP = document.getElementById("lpRangeSlider");
+    noUiSlider.create(priceSliderLP, {
+      start: [ 1000, 3500 ],
+      range: {
+          'min': [  0 ],
+          'max': [ 10000 ]
+      },
+      connect: true,
+        format: wNumb({
+            decimals: 0
+        })
+    });
+
+    priceSliderLP.noUiSlider.on('update', function( values, handle ) {
+        minVal = parseInt( values[0] );
+        maxVal = parseInt( values[1] );
+        $("#r_val_1").text(minVal);
+        $("#r_val_2").text(maxVal);
+    });
+
+  }
+
+  // --------------
+
+  $("#showSearchSteps").on("click", function(e) {
+    e.preventDefault();
+    $(".lp_search_steps_box").addClass("show");
+    $(this).remove();
+    $(".lp_video_btn").remove();
+  });
+
+
 });

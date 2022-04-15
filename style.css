@@ -988,6 +988,23 @@ a:active {
     z-index: 2;
 }
 
+.lp_promo_two_cols {
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+}
+
+.lp_promo_two_cols > .left_col {
+    width: calc(100% - 480px);
+    padding: 0 10px 0 0;
+}
+
+.lp_promo_two_cols > .right_col {
+    width: 480px;
+    padding: 0 0 0 10px;
+}
+
 .lp_promo_descript_wrapp {
     display: flex;
     display: -webkit-flex;
@@ -1214,10 +1231,13 @@ a:active {
     width: 149px;
     height: 149px;
     position: absolute;
-    bottom: 266px;
-    right: 168px;
+    /*bottom: 266px;*/
+    /*right: 168px;*/
     cursor: pointer;
     z-index: 2;
+    top: 50%;
+    margin-top: -70px;
+    right: 70px;
 }
 
 .lp_video_btn:before {
@@ -1245,6 +1265,292 @@ a:active {
     position: absolute;
     top: 0;
     left: 0;
+}
+
+.lp_search_steps_box {
+    display: none;
+}
+
+.lp_search_steps_box.show {
+    display: block;
+}
+
+.lp_search_steps {
+    background: #FFF;
+    box-shadow: 0 11px 35px rgba(0, 0, 0, .05);
+    -webkit-box-shadow: 0 11px 35px rgba(0, 0, 0, .05);
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    width: 100%;
+    max-width: 469px;
+    margin-top: 13px;
+    padding: 16px 30px 29px 30px;
+    position: relative;
+    z-index: 3;
+}
+
+.lp_search_steps_count {
+    padding: 15px 0;
+    text-align: center;
+}
+
+.lp_search_steps_count > p {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #ADADAD;
+}
+
+.lp_search_steps_count > p span {
+    font-weight: 600;
+    color: #585858;
+}
+
+.lp_search_steps_line {
+    height: 8px;
+    margin: 10px 0;
+    border: .5px solid #EEE;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
+
+.lp_search_steps_line span {
+    display: inline-block;
+    vertical-align: top;
+    background: #A0CD69;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    height: 8px;
+    position: relative;
+    top: -1px;
+    left: -1px;
+}
+
+.lp_search_steps_descript {
+    padding: 30px 0 20px 0;
+}
+
+.lp_search_steps_descript p {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 139.5%;
+    color: #505050;
+}
+
+.lp_steps_inner {
+    min-height: 210px;
+}
+
+.lp_step_search_title {
+    padding: 3px 0 10px 0;
+}
+
+.lp_step_search_title h3 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    color: #141F27;
+}
+
+.lp_checkbox_wrapp {
+    padding: 6px 0;
+}
+
+.lp_checkbox {
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    padding-left: 32px;
+    position: relative;
+}
+
+.lp_checkbox p {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #141F27;
+}
+
+.lp_checkbox input {
+    width: 0;
+    height: 0;
+    z-index: -1;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.lp_checkbox span:before {
+    display: block;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: 1px solid #B0BABF;
+    position: absolute;
+    top: -1px;
+    left: 0;
+}
+
+.lp_checkbox input:checked + span:before {
+    border: 1px solid #FF5722;
+    background-color: #FF5722;
+    background-image: url(img/checked.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+}
+
+.lp_step_form_submit {
+    padding: 10px 0 10px 0;
+}
+
+.lp_steps_pill {
+    width: 100%;
+    padding: 12px 25px;
+    text-transform: uppercase;
+    min-height: 48px;
+    font-size: 14px;
+}
+
+.lp_search_steps {
+    padding-bottom: 100px;
+    min-height: 487px;
+}
+
+.lp_range_slider_wrapp {
+    padding-top: 35px;
+}
+
+.lp_step_search_title_2 {
+    padding-top: 20px;
+}
+
+.lp_sl_range_vals {
+    display: flex;
+    display: -webkit-flex;
+    padding: 9px 0 9px 0;
+}
+
+.lp_sl_range_vals > div:nth-child(odd) {
+    width: 50%;
+    padding: 10px 10px 10px 0;
+}
+
+.lp_sl_range_vals > div:nth-child(even) {
+    width: 50%;
+    padding: 10px 0 10px 10px;
+    text-align: right;
+}
+
+.lp_range_val {
+    display: inline-block;
+    vertical-align: top;
+    height: 34px;
+    min-width: 108px;
+    padding: 0 15px 0 15px;
+    text-align: center;
+    border: 1px solid #EBEBEB;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 33px;
+    color: #141F27;
+}
+
+.lp_range_slider.noUi-horizontal {
+    height: 4px; 
+    margin: 13px 0;
+    position: relative;
+}
+
+.lp_range_slider:before {
+    display: block;
+    content: "";
+    width: 1px;
+    height: 12px;
+    background-color: #EBEBEB;
+    position: absolute;
+    top: -4px;
+    left: 0;
+}
+
+.lp_range_slider:after {
+    display: block;
+    content: "";
+    width: 1px;
+    height: 12px;
+    background-color: #EBEBEB;
+    position: absolute;
+    top: -4px;
+    right: 0;
+}
+
+.lp_range_slider.noUi-horizontal .noUi-handle {
+    width: 24px;
+    height: 24px;
+    background-image: url(img/sl_dots.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    top: -11px;
+}
+
+.lp_range_slider .noUi-connect {
+    background: linear-gradient(135deg, #86C446 0%, #05ADE4 100%);
+    background: -webkit-linear-gradient(135deg, #86C446 0%, #05ADE4 100%);
+}
+
+.range_val_num {
+    padding-right: 10px;
+}
+
+.lp_range_val span.sq {
+    font-size: 8px;
+    position: relative;
+    top: -6px;
+    right: -1px;
+}
+
+.lp_checkboxes_wrapp {
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    margin: 5px -10px 0 -10px;
+}
+
+.lp_checkboxes_wrapp > div {
+    width: 50%;
+    padding: 9px 10px 8px 10px;
+}
+
+.lp_step_input {
+    margin: 12px 0;
+}
+
+.lp_step_input input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 0 23px;
+    border: 1.5px solid #E9E9E9;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    font-size: 14px;
+    line-height: 39px;
+    color: #262733;
+}
+
+.lp_step_form_footer {
+    width: 100%;
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    padding: 0 25px;  
 }
 
 /*-- /Section 1 - Landing Main Page --*/
